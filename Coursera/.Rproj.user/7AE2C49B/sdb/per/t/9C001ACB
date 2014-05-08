@@ -1,0 +1,22 @@
+{
+    "contents" : "",
+    "created" : 1399488675228.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "9C001ACB",
+    "lastKnownWriteTime" : 308202096,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "caption" : "hw1_data",
+        "contentUrl" : "content?title=hw1_data&file=0b9d1bbbeb6a41d79bdd6883252f9f12.htm",
+        "displayedObservations" : 153,
+        "displayedVariables" : 6,
+        "totalObservations" : 153,
+        "variables" : 6
+    },
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
