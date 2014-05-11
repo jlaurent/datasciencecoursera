@@ -1,0 +1,17 @@
+{
+    "contents" : "require(knitr)\n\n\ngetwd()\n\nsetwd(\"C:/Users/Fafner/Documents/R/datasciencecoursera/Coursera/Air_pollutants\")\n\nsource(pollutantmean.R)\n\n",
+    "created" : 1399650055110.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4097251295",
+    "id" : "BAADEBC5",
+    "lastKnownWriteTime" : 1399731590,
+    "path" : "~/R/datasciencecoursera/Coursera/Air_pollutants/Main_script.R",
+    "project_path" : "Air_pollutants/Main_script.R",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

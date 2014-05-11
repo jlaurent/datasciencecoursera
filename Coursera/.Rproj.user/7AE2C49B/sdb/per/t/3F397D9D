@@ -1,0 +1,17 @@
+{
+    "contents" : "# Set WD !!\n\n\npollutantmean <- function(directory, pollutant, id){\n        file_list <- list.files(directory, full.names = TRUE)\n        df <- do.call(rbind, lapply(file_list, read.csv, header = TRUE))\n        subdf <- subset(df, ID %in% c(id))\n        pollmean <- mean(subdf[[pollutant]], na.rm = TRUE)\n        pollmean\n}\n\n# est il possible de créer la df uniquement si  elle n'existe pas déjà afin de gagner du temps ?\n\n\npollutantmean(\"specdata\", \"nitrate\", c(2, 5))\n",
+    "created" : 1399650126727.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "966716506",
+    "id" : "3F397D9D",
+    "lastKnownWriteTime" : 1399731588,
+    "path" : "~/R/datasciencecoursera/Coursera/Air_pollutants/pollutantmean.R",
+    "project_path" : "Air_pollutants/pollutantmean.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

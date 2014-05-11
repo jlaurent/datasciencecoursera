@@ -1,0 +1,17 @@
+{
+    "contents" : "complete <- function(directory, id = 1:332) {\n        ## 'directory' is a character vector of length 1 indicating\n        ## the location of the CSV files\n        \n        ## 'id' is an integer vector indicating the monitor ID numbers\n        ## to be used\n        \n        ## Return a data frame of the form:\n        ## id nobs\n        ## 1  117\n        ## 2  1041\n        ## ...\n        ## where 'id' is the monitor ID number and 'nobs' is the\n        ## number of complete cases\n}\n\n\ncomplete_df <- df[complete.cases(df), ]\n\nby(df, df$ID, nrow)\n\nrequire(dplyr)\n\n\n\nresultdf <- complete_df %.%\n        group_by(ID) %.%\n        summarise(nobs = length(nitrate))\n        \n        \n# Donne le bon résultat, il faut juste subset ensuite \nrowdf <- ddply(complete_df, \"ID\", summarise,\n                  nobs = length(nitrate))\nresultdf <- subset(rowdf, ID %in% c(30:25))\n# il faut changer le titre de ID à id et trouver comment faire pour que le \n# résultat soit ordonné dans l'ordre du vecteur id et pas forcément dans l'ordre croissant\nresultdf\n",
+    "created" : 1399731040886.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1431126663",
+    "id" : "A61B7894",
+    "lastKnownWriteTime" : 1399734500,
+    "path" : "~/R/datasciencecoursera/Coursera/Air_pollutants/complete.R",
+    "project_path" : "Air_pollutants/complete.R",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
