@@ -14,14 +14,20 @@ complete <- function(directory, id = 1:332) {
         ## number of complete cases
 }
 
+file_list <- list.files(directory, full.names = TRUE)
+df <- do.call(rbind, lapply(file_list, read.csv, header = TRUE))
 
 complete_df <- df[complete.cases(df), ]
 
-by(df, df$ID, nrow)
+?tapply()
+
+tapply(complete_df$ID, complete_df$ID, length)
+
+
+
+# by(df, df$ID, nrow)
 
 require(dplyr)
-
-
 
 resultdf <- complete_df %.%
         group_by(ID) %.%
@@ -29,6 +35,7 @@ resultdf <- complete_df %.%
         
         
 # Donne le bon résultat, il faut juste subset ensuite 
+
 rowdf <- ddply(complete_df, "ID", summarise,
                   nobs = length(nitrate))
 resultdf <- subset(rowdf, ID %in% c(30:25))
